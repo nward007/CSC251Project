@@ -157,7 +157,7 @@ public class Policy
      Gets policy holder's age
      @return holderAge integer
    */
-   public int getAge()
+   public int getHolderAge()
    {
       return this.holderAge;
    }
