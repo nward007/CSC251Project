@@ -46,6 +46,7 @@ public class Project_nathaniel_ward
          }// END WHILE LOOP
          
          // Output results
+         int numberOfSmokers = 0;
          for (int s=0; s<policies.size(); s++)
          {
             System.out.println("Policy Number: " + policies.get(s).getPolicyNumber());
@@ -59,7 +60,15 @@ public class Project_nathaniel_ward
             System.out.println("Policyholder's BMI: " + policies.get(s).calculateHolderBMI());
             System.out.println("Policy Price: " + String.format("$%.2f", policies.get(s).calculatePolicyPrice()));
             System.out.println("\n");
+            if (policies.get(s).getHolderSmokingStatus().equals("smoker"))
+            {
+               numberOfSmokers++;
+            }
          }// END FOR
+         
+         // Display the number of Policyholders that are smokers and the number of Policyholders that are non-smokers.
+         System.out.println("The number of policies with a smoker is: " + numberOfSmokers);
+         System.out.println("The number of policies with a non-smoker is: " + (policies.size() - numberOfSmokers));
          
          // Close keyboard and file 
          keyboard.close();
