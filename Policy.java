@@ -61,4 +61,13 @@ public class Policy
       return this.providerName;
    }
    
+   /*
+     toString method
+     @return String value output information
+   */
+   public String toString()
+   {
+      return "\nPolicy Number: " + this.getPolicyNumber() + "\nProvider's Name: " + this.getProviderName() + "\n";
+   }
+   
 }
