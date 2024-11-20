@@ -11,6 +11,14 @@ public class Policy
    private PolicyHolder policyHolder;
    
    /*
+     Instance counter increment
+   */
+   public Policy()
+   {
+      policyObjects++;
+   }
+   
+   /*
      No-arg constructor to set default values
    */
    public Policy()
