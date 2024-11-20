@@ -32,6 +32,17 @@ public class PolicyHolder
       this.holderWeight = holderWeight;  
    }
    
+   // Copy constructor
+   public PolicyHolder(PolicyHolder obj)
+   {
+      this.holderFirstName = obj.holderFirstName;
+      this.holderLastName = obj.holderLastName;
+      this.holderAge = obj.holderAge;
+      this.holderSmokingStatus = obj.holderSmokingStatus;
+      this.holderHeight = obj.holderHeight;
+      this.holderWeight = objholderWeight; 
+   }
+   
    /*
      Set policy holder's first name
      @param holderFirstName String
