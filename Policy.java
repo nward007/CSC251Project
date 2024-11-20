@@ -2,6 +2,8 @@
 
 public class Policy
 {
+   // Static field
+   public static int policyObjects = 0;
    // Data fields
    private int number;
    private String providerName;
