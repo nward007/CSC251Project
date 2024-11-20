@@ -7,6 +7,8 @@ public class Policy
    // Data fields
    private int number;
    private String providerName;
+   // Policy holder object
+   private PolicyHolder policyHolder;
    
    /*
      No-arg constructor to set default values
@@ -15,16 +17,18 @@ public class Policy
    {
       this.number = 12345;
       this.providerName = "CSC251 Insurance";
+      this.policyHolder = new PolicyHolder();
    }
    
    /*
      Constructor that accepts arguments
      @param
    */
-   public Policy(int number, String providerName)
+   public Policy(int number, String providerName, PolicyHolder policyHolder)
    {
       this.number = number;
       this.providerName = providerName;
+      this.policyHolder = new PolicyHolder(policyHolder);
    }
    
    /*
