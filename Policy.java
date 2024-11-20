@@ -11,18 +11,12 @@ public class Policy
    private PolicyHolder policyHolder;
    
    /*
-     Instance counter increment
+     No-arg constructor to set default values
+     Added object increment counter
    */
    public Policy()
    {
       policyObjects++;
-   }
-   
-   /*
-     No-arg constructor to set default values
-   */
-   public Policy()
-   {
       this.number = 12345;
       this.providerName = "CSC251 Insurance";
       this.policyHolder = new PolicyHolder();
@@ -34,6 +28,7 @@ public class Policy
    */
    public Policy(int number, String providerName, PolicyHolder policyHolder)
    {
+      policyObjects++;
       this.number = number;
       this.providerName = providerName;
       this.policyHolder = new PolicyHolder(policyHolder);
@@ -76,12 +71,21 @@ public class Policy
    }
    
    /*
+     Returns policyHolder object
+     @return PolicyHolder object
+   */
+   public PolicyHolder getPolicyHolder()
+   {
+      return this.policyHolder;
+   }
+   
+   /*
      toString method
      @return String value output information
    */
    public String toString()
    {
-      return "\nPolicy Number: " + this.getPolicyNumber() + "\nProvider's Name: " + this.getProviderName() + "\n";
+      return "Policy Number: " + this.getPolicyNumber() + "\nProvider's Name: " + this.getProviderName();
    }
    
 }

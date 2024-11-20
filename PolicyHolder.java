@@ -11,7 +11,7 @@ public class PolicyHolder
    private int holderWeight;
    
    // No-arg constructor
-   public PolicyHolder
+   public PolicyHolder()
    {
       this.holderFirstName = "Bob";
       this.holderLastName = "Ross";
@@ -40,7 +40,7 @@ public class PolicyHolder
       this.holderAge = obj.holderAge;
       this.holderSmokingStatus = obj.holderSmokingStatus;
       this.holderHeight = obj.holderHeight;
-      this.holderWeight = objholderWeight; 
+      this.holderWeight = obj.holderWeight; 
    }
    
    /*
@@ -202,10 +202,10 @@ public class PolicyHolder
    */
    public String toString()
    {
-      return ("\nPolicyholder's First Name: " + this.getHolderFirstName() + "\nPolicyholder's Last Name: " + this.getHolderLastName() + 
+      return ("Policyholder's First Name: " + this.getHolderFirstName() + "\nPolicyholder's Last Name: " + this.getHolderLastName() + 
               "\nPolicyholder's Age: " + this.getHolderAge() + "\nPolicyholder's Smoking Status: " + this.getHolderSmokingStatus() +
               "\nPolicyholder's Height: " + this.getHolderHeight() + "\nPolicyholder's Weight: " + this.getHolderWeight() +
-              "\nPolicyholder's BMI: " + this.calculateHolderBMI() + "\nPolicy Price: " + this.calculatePolicyPrice() + "\n";
+              "\nPolicyholder's BMI: " + this.calculateHolderBMI() + "\nPolicy Price: " + this.calculatePolicyPrice());
    }
      
 }
