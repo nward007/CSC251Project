@@ -154,10 +154,10 @@ public class PolicyHolder
    
    /*
      Calculates and returns the price of the insurance policy
-    The Insurance Policy has a base fee of $600
-    If the Policyholder is over 50 years old, there is an additional fee of $75
-    If the Policyholder is a smoker, there is an additional fee of $100
-    If the Policyholder has a BMI of over 35, there is an additional fee calculated as follows:
+     The Insurance Policy has a base fee of $600
+     If the Policyholder is over 50 years old, there is an additional fee of $75
+     If the Policyholder is a smoker, there is an additional fee of $100
+     If the Policyholder has a BMI of over 35, there is an additional fee calculated as follows:
         Additional Fee = ( BMI – 35 ) * 20
      @return policyPrice double representing total policy holder's policy price
    */
@@ -185,4 +185,16 @@ public class PolicyHolder
       return policyPrice; 
    }
    
+   /*
+     toString method
+     @return String value output information
+   */
+   public String toString()
+   {
+      return ("\nPolicyholder's First Name: " + this.getHolderFirstName() + "\nPolicyholder's Last Name: " + this.getHolderLastName() + 
+              "\nPolicyholder's Age: " + this.getHolderAge() + "\nPolicyholder's Smoking Status: " + this.getHolderSmokingStatus() +
+              "\nPolicyholder's Height: " + this.getHolderHeight() + "\nPolicyholder's Weight: " + this.getHolderWeight() +
+              "\nPolicyholder's BMI: " + this.calculateHolderBMI() + "\nPolicy Price: " + this.calculatePolicyPrice() + "\n";
+   }
+     
 }
